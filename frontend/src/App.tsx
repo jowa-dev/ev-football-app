@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import WhoIsPlaying from './pages/WhoIsPlaying';
 
@@ -10,4 +9,4 @@ const App = () => (
   </BrowserRouter>
 );
 
-export default App
+export default App;
