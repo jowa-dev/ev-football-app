@@ -1,0 +1,24 @@
+{
+  "players": [
+    {
+      "name": "Joel Warriner",
+      "position": "Defender",
+      "rating": 9
+    },
+    {
+      "name": "Tom Oborne",
+      "position": "Midfielder",
+      "rating": 9
+    },
+    {
+      "name": "Denet Benny",
+      "position": "Midfielder",
+      "rating": 9
+    },
+    {
+      "name": "Adam Baxter",
+      "position": "Forward",
+      "rating": 9
+    }
+  ]
+}
