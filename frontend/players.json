@@ -19,6 +19,36 @@
       "name": "Adam Baxter",
       "position": "Forward",
       "rating": 9
+    },
+    {
+      "name": "Max Coghlan",
+      "position": "Forward",
+      "rating": 9
+    },
+    {
+      "name": "Ashley Staples",
+      "position": "Forward",
+      "rating": 9
+    },
+    {
+      "name": "Isaac Black",
+      "position": "Forward",
+      "rating": 9
+    },
+    {
+      "name": "Stephen Campbell",
+      "position": "Forward",
+      "rating": 9
+    },
+    {
+      "name": "Craig Johnson",
+      "position": "Forward",
+      "rating": 9
+    },
+    {
+      "name": "David Metcalf",
+      "position": "Forward",
+      "rating": 9
     }
   ]
 }
