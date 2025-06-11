@@ -7,7 +7,7 @@
     },
     {
       "name": "Tom Oborne",
-      "position": "Midfielder",
+      "position": "Forward",
       "rating": 9
     },
     {
@@ -32,12 +32,12 @@
     },
     {
       "name": "Isaac Black",
-      "position": "Forward",
+      "position": "Defender",
       "rating": 9
     },
     {
       "name": "Stephen Campbell",
-      "position": "Forward",
+      "position": "Midfielder",
       "rating": 9
     },
     {
@@ -47,7 +47,12 @@
     },
     {
       "name": "David Metcalf",
-      "position": "Forward",
+      "position": "Defender",
+      "rating": 9
+    },
+    {
+      "name": "Paul Oliver",
+      "position": "Defender",
       "rating": 9
     }
   ]
