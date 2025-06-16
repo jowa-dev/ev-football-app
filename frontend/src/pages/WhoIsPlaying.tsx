@@ -1,11 +1,13 @@
+import { useState } from 'react';
 import '../components/styles/who-is-playing.css';
 import { Formik, Form } from 'formik';
 import { Button, Card, Flex, Checkbox, Box, ScrollArea, Text } from '@radix-ui/themes';
 import playerData from '../../players.json';
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const WhoIsPlaying = ({ setPlayers }: { setPlayers: any }) => {
   const [playerAmount, setPlayerAmount] = useState(0);
+  const navigate = useNavigate();
 
   const mappedPlayerData = playerData.players.map((player) => ({
     ...player,
@@ -15,6 +17,7 @@ const WhoIsPlaying = ({ setPlayers }: { setPlayers: any }) => {
   const handleSubmit = (values: any) => {
     const players = values.players.filter(({ isPlaying }: { isPlaying: boolean }) => isPlaying);
     setPlayers(players);
+    navigate('team-selection');
   };
 
   return (
@@ -36,7 +39,7 @@ const WhoIsPlaying = ({ setPlayers }: { setPlayers: any }) => {
                       <Card key={player.name} style={{ margin: 10 }}>
                         <Flex gap="10px" align="center" justify="between">
                           <Flex direction="column">
-                            <Text size="2" color="plum" weight="medium">{player.name} ({player.rating})</Text>
+                            <Text size="2" color="plum" weight="medium">{player.name}</Text>
                             <Text size="2" color="gray" weight="medium">{player.position}</Text>
                           </Flex>
                           <Checkbox

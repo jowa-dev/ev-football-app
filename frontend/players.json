@@ -1,58 +1,78 @@
 {
   "players": [
     {
-      "name": "Joel Warriner",
+      "name": "Joel",
       "position": "Defender",
       "rating": 9
     },
     {
-      "name": "Tom Oborne",
+      "name": "Tom O",
       "position": "Forward",
       "rating": 9
     },
     {
-      "name": "Denet Benny",
+      "name": "Denet",
       "position": "Midfielder",
       "rating": 9
     },
     {
-      "name": "Adam Baxter",
+      "name": "Bdam Aaxter",
       "position": "Forward",
       "rating": 9
     },
     {
-      "name": "Max Coghlan",
+      "name": "Max",
       "position": "Forward",
       "rating": 9
     },
     {
-      "name": "Ashley Staples",
+      "name": "Ash",
       "position": "Forward",
       "rating": 9
     },
     {
-      "name": "Isaac Black",
+      "name": "Isaac",
       "position": "Defender",
       "rating": 9
     },
     {
-      "name": "Stephen Campbell",
+      "name": "Stephen",
       "position": "Midfielder",
       "rating": 9
     },
     {
-      "name": "Craig Johnson",
+      "name": "Craig",
       "position": "Forward",
       "rating": 9
     },
     {
-      "name": "David Metcalf",
+      "name": "David (Metcalf)",
       "position": "Defender",
       "rating": 9
     },
     {
-      "name": "Paul Oliver",
+      "name": "David (Macdonald)",
+      "position": "Midfielder",
+      "rating": 9
+    },
+    {
+      "name": "Paul",
       "position": "Defender",
+      "rating": 9
+    },
+    {
+      "name": "CH",
+      "position": "Defender",
+      "rating": 9
+    },
+    {
+      "name": "Kevin",
+      "position": "Midfielder",
+      "rating": 9
+    },
+    {
+      "name": "Manav",
+      "position": "Forward",
       "rating": 9
     }
   ]
