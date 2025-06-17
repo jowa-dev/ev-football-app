@@ -88,7 +88,13 @@ const TeamSelection = ({ players }: any) => {
             </Box>
           ))}
         </Box>
-        <Button style={{ width: '50%', margin: '0 auto', cursor: 'pointer' }} variant="soft" color="iris" onClick={handleDraw}>
+        <Button
+          style={{ width: '50%', margin: '0 auto', cursor: 'pointer' }} 
+          variant="soft" 
+          color="iris" 
+          onClick={handleDraw}
+          disabled={teamOne.every((player: any) => !player.isAnon) && teamTwo.every((player: any) => !player.isAnon)}
+        >
           Draw
         </Button>
       </Box>
