@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Box, Flex, Checkbox, Text, ScrollArea, Card, Button } from '@radix-ui/themes';
+import { useState } from 'react'
+import { Box, Flex, Checkbox, Text, ScrollArea, Button } from '@radix-ui/themes';
 import { Formik, Form } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import playerData from '../../../players.json';
