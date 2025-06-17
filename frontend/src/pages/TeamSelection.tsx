@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Box, Flex, Text, Button } from '@radix-ui/themes';
 import '../components/styles/team-selection.css';
+import NoPlayersSelected from '../components/ui/NoPlayersSelected';
 
 const TeamSelection = ({ players }: any) => {
   const [teamOne, setTeamOne]: any = useState([]);
@@ -51,7 +52,7 @@ const TeamSelection = ({ players }: any) => {
 
   if (players.length === 0 && teamOne.length === 0) return (
     <div>
-      Please select players
+      <NoPlayersSelected />
     </div>
   );
 
