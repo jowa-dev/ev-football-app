@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Box, Flex, Text, Button, Card } from '@radix-ui/themes';
+import { Box, Flex, Button } from '@radix-ui/themes';
 import '../components/styles/team-selection.css';
 import NoPlayersSelected from '../components/ui/NoPlayersSelected';
 import Header from '../components/ui/Header';
