@@ -71,20 +71,20 @@ const TeamSelection = ({ players }: any) => {
         </Box>
         <Box>
           <Text size="3" weight="bold">TEAM 1</Text>
-          {teamOne.map((player: any) => (
+          {teamOne.map((player: any, index: number) => (
             <Box style={{ background: '#06174d', borderRadius: '5px', padding: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
               <Flex direction="column" gap="1">
-                <Text size="3" weight="bold">{player.isAnon ? player.anonName : player.name}</Text>
+                <Text size="3" weight="bold">{player.isAnon ? player.anonName : `${player.name} ${index === 0 ? '©️' : ''}`}</Text>
               </Flex>
             </Box>
           ))}
         </Box>
         <Box>
           <Text size="3" weight="bold">TEAM 2</Text>
-          {teamTwo.map((player: any) => (
+          {teamTwo.map((player: any, index: number) => (
             <Box style={{ background: '#06174d', borderRadius: '5px', padding: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
               <Flex direction="column" gap="1">
-                <Text size="3" weight="bold">{player.isAnon ? player.anonName : player.name}</Text>
+                <Text size="3" weight="bold">{player.isAnon ? player.anonName : `${player.name} ${index === 0 ? '©️' : ''}`}</Text>
               </Flex>
             </Box>
           ))}
