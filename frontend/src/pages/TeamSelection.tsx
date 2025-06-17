@@ -51,7 +51,7 @@ const TeamSelection = ({ players }: any) => {
 
   if (players.length === 0 && teamOne.length === 0) return (
     <div>
-      No players found
+      Please select players
     </div>
   );
 
