@@ -3,6 +3,7 @@ import { Box, Flex, Text, Button, Card } from '@radix-ui/themes';
 import '../components/styles/team-selection.css';
 import NoPlayersSelected from '../components/ui/NoPlayersSelected';
 import Header from '../components/ui/Header';
+import TeamBox from '../components/ui/TeamBox';
 
 const TeamSelection = ({ players }: any) => {
   const [teamOne, setTeamOne]: any = useState([]);
@@ -51,6 +52,16 @@ const TeamSelection = ({ players }: any) => {
     generateTeams();
   }, [])
 
+  const convertToSlackMessage = () => {
+    const teamText = 
+    `🥊 Team 1\n` +
+    teamOne.map((player: any, index: number) => `- ${player.name} ${index === 0 ? '(C)' : ''}`).join('\n') +
+    `\n-------\n` +
+    `💪 Team 2\n` +
+    teamTwo.map((player: any, index: number) => `- ${player.name} ${index === 0 ? '(C)' : ''}`).join('\n');
+    navigator.clipboard.writeText(teamText);
+  }
+
   if (players.length === 0 && teamOne.length === 0) return (
     <div>
       <NoPlayersSelected />
@@ -58,53 +69,36 @@ const TeamSelection = ({ players }: any) => {
   );
 
   return (
-    <Flex height="100vh" justify="center" align="center" direction="column" gap="20px">
-      <Box 
-        style={{ background: '#010e38', borderRadius: '10px', border: '1px solid white', display: 'flex', flexDirection: 'column', gap: '30px', width: '40%' }} 
-        p="20px"
-      >
-        <Header subMessage="GENERATED TEAMS" />
-        <Box style={{ display: 'flex', width: '100%', justifyContent: 'space-between', gap: '10px' }}>
-          <Card style={{ width: '50%' }}>
-            <Text size="3" weight="bold">TEAM 1</Text>
-            {teamOne.map((player: any, index: number) => (
-              <Box style={{ background: '#06174d', borderRadius: '5px', padding: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
-                <Flex direction="column" gap="1">
-                  <Text size="3" weight="bold">{player.isAnon ? player.anonName : `${player.name} ${index === 0 ? '©️' : ''}`}</Text>
-                </Flex>
-              </Box>
-            ))}
-          </Card>
-          <Card style={{ width: '50%' }}>
-            <Text size="3" weight="bold">TEAM 2</Text>
-            {teamTwo.map((player: any, index: number) => (
-              <Box style={{ background: '#06174d', borderRadius: '5px', padding: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
-                <Flex direction="column" gap="1">
-                  <Text size="3" weight="bold">{player.isAnon ? player.anonName : `${player.name} ${index === 0 ? '©️' : ''}`}</Text>
-                </Flex>
-              </Box>
-            ))}
-          </Card>
-        </Box>
-        {/* <Box>
-          <Text size="3" weight="bold">TEAM 2</Text>
-          {teamTwo.map((player: any, index: number) => (
-            <Box style={{ background: '#06174d', borderRadius: '5px', padding: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
-              <Flex direction="column" gap="1">
-                <Text size="3" weight="bold">{player.isAnon ? player.anonName : `${player.name} ${index === 0 ? '©️' : ''}`}</Text>
-              </Flex>
-            </Box>
-          ))}
-        </Box> */}
-        <Button
-          style={{ width: '50%', margin: '0 auto', cursor: 'pointer' }} 
-          variant="soft" 
-          color="iris" 
-          onClick={handleDraw}
-          disabled={teamOne.every((player: any) => !player.isAnon) && teamTwo.every((player: any) => !player.isAnon)}
+    <Flex height="100vh" justify="center" align="center" gap="10px" direction="column">
+      <Box style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '10px' }}>
+        <Box 
+          style={{ background: '#010e38', borderRadius: '10px', border: '1px solid rgb(133, 133, 133)', display: 'flex', flexDirection: 'column', gap: '10px', width: '22%' }} 
+          p="20px"
         >
-          Draw
-        </Button>
+          <Header hideHeader={true} subMessage="GENERATED TEAMS" />
+          <TeamBox team={teamOne} teamNumber="1" />
+          <TeamBox team={teamTwo} teamNumber="2" />
+          <Flex mt="4" direction="column" gap="2">
+            <Button
+              style={{ width: '50%', margin: '0 auto', cursor: 'pointer' }} 
+              variant="soft" 
+              color="sky"
+              onClick={handleDraw}
+              disabled={teamOne.every((player: any) => !player.isAnon) && teamTwo.every((player: any) => !player.isAnon)}
+            >
+              Draw
+            </Button>
+            <Button
+              style={{ width: '55%', margin: '0 auto', cursor: 'pointer' }} 
+              variant="soft" 
+              color="sky"
+              onClick={convertToSlackMessage}
+              disabled={!(teamOne.every((player: any) => !player.isAnon) && teamTwo.every((player: any) => !player.isAnon))}
+            >
+              Convert to Slack Message
+            </Button>
+          </Flex>
+        </Box>
       </Box>
     </Flex>
   );

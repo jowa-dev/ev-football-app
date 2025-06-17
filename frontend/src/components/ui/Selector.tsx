@@ -26,7 +26,7 @@ const Selector = ({ setPlayers }: { setPlayers: any }) => {
         style={{ background: '#010e38', borderRadius: '10px', border: '1px solid white', display: 'flex', flexDirection: 'column', gap: '30px' }} 
         p="20px"
       >
-        <Header subMessage="TEAM SELECTION" />
+        <Header hideHeader={false} subMessage="TEAM SELECTION" />
         <Box>
           <Text weight="bold">SELECT PLAYERS</Text>
           <Formik

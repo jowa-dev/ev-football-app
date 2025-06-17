@@ -3,77 +3,87 @@
     {
       "name": "Joel",
       "position": "Defender",
-      "rating": 9
+      "rating": 7
     },
     {
       "name": "Tom O",
       "position": "Forward",
-      "rating": 9
+      "rating": 6
     },
     {
       "name": "Denet",
       "position": "Midfielder",
-      "rating": 9
+      "rating": 6
     },
     {
       "name": "Bdam Aaxter",
       "position": "Forward",
-      "rating": 9
+      "rating": 7
     },
     {
       "name": "Max",
       "position": "Forward",
-      "rating": 9
+      "rating": 7
     },
     {
       "name": "Ash",
-      "position": "Forward",
-      "rating": 9
+      "position": "Midfielder",
+      "rating": 8
     },
     {
       "name": "Isaac",
       "position": "Defender",
-      "rating": 9
+      "rating": 7
     },
     {
       "name": "Stephen",
-      "position": "Midfielder",
-      "rating": 9
+      "position": "Goalkeeper",
+      "rating": 7
     },
     {
       "name": "Craig",
       "position": "Forward",
-      "rating": 9
+      "rating": 6
     },
     {
       "name": "David (Metcalf)",
       "position": "Defender",
-      "rating": 9
+      "rating": 6
     },
     {
       "name": "David (Macdonald)",
       "position": "Midfielder",
-      "rating": 9
+      "rating": 10
     },
     {
       "name": "Paul",
       "position": "Defender",
-      "rating": 9
+      "rating": 4
     },
     {
       "name": "CH",
       "position": "Defender",
-      "rating": 9
+      "rating": 6
     },
     {
       "name": "Kevin",
       "position": "Midfielder",
-      "rating": 9
+      "rating": 7
     },
     {
       "name": "Manav",
       "position": "Forward",
-      "rating": 9
+      "rating": 6
+    },
+    {
+      "name": "Virgil",
+      "position": "Defender",
+      "rating": 4
+    },
+    {
+      "name": "Patryk",
+      "position": "Midfielder",
+      "rating": 6
     }
   ]
 }

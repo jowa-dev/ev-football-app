@@ -15,7 +15,7 @@ const NoPlayersSelected = () => {
         style={{ background: '#010e38', borderRadius: '10px', border: '1px solid white', display: 'flex', flexDirection: 'column', gap: '30px' }} 
         p="20px"
       >
-        <Header subMessage="ERROR" />
+        <Header hideHeader={false} subMessage="ERROR" />
         <Text size="6" weight="bold" style={{ textAlign: 'center' }}>
           No players selected
         </Text>
