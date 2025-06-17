@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Box, Flex, Text, Button } from '@radix-ui/themes';
+import { Box, Flex, Text, Button, Card } from '@radix-ui/themes';
 import '../components/styles/team-selection.css';
 import NoPlayersSelected from '../components/ui/NoPlayersSelected';
+import Header from '../components/ui/Header';
 
 const TeamSelection = ({ players }: any) => {
   const [teamOne, setTeamOne]: any = useState([]);
@@ -59,27 +60,33 @@ const TeamSelection = ({ players }: any) => {
   return (
     <Flex height="100vh" justify="center" align="center" direction="column" gap="20px">
       <Box 
-        style={{ background: '#010e38', borderRadius: '10px', border: '1px solid white', display: 'flex', flexDirection: 'column', gap: '30px' }} 
+        style={{ background: '#010e38', borderRadius: '10px', border: '1px solid white', display: 'flex', flexDirection: 'column', gap: '30px', width: '40%' }} 
         p="20px"
       >
-        <Box style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-          <img src="/assets/cl.png" height="90px" />
-          <Flex direction="column" align="center" gap="2">
-            <Text size="6" weight="bold">EV CHAMPIONS LEAGUE</Text>
-            <Text size="3" weight="bold">GENERATED TEAMS</Text>
-          </Flex>
+        <Header subMessage="GENERATED TEAMS" />
+        <Box style={{ display: 'flex', width: '100%', justifyContent: 'space-between', gap: '10px' }}>
+          <Card style={{ width: '50%' }}>
+            <Text size="3" weight="bold">TEAM 1</Text>
+            {teamOne.map((player: any, index: number) => (
+              <Box style={{ background: '#06174d', borderRadius: '5px', padding: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
+                <Flex direction="column" gap="1">
+                  <Text size="3" weight="bold">{player.isAnon ? player.anonName : `${player.name} ${index === 0 ? '©️' : ''}`}</Text>
+                </Flex>
+              </Box>
+            ))}
+          </Card>
+          <Card style={{ width: '50%' }}>
+            <Text size="3" weight="bold">TEAM 2</Text>
+            {teamTwo.map((player: any, index: number) => (
+              <Box style={{ background: '#06174d', borderRadius: '5px', padding: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
+                <Flex direction="column" gap="1">
+                  <Text size="3" weight="bold">{player.isAnon ? player.anonName : `${player.name} ${index === 0 ? '©️' : ''}`}</Text>
+                </Flex>
+              </Box>
+            ))}
+          </Card>
         </Box>
-        <Box>
-          <Text size="3" weight="bold">TEAM 1</Text>
-          {teamOne.map((player: any, index: number) => (
-            <Box style={{ background: '#06174d', borderRadius: '5px', padding: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
-              <Flex direction="column" gap="1">
-                <Text size="3" weight="bold">{player.isAnon ? player.anonName : `${player.name} ${index === 0 ? '©️' : ''}`}</Text>
-              </Flex>
-            </Box>
-          ))}
-        </Box>
-        <Box>
+        {/* <Box>
           <Text size="3" weight="bold">TEAM 2</Text>
           {teamTwo.map((player: any, index: number) => (
             <Box style={{ background: '#06174d', borderRadius: '5px', padding: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
@@ -88,7 +95,7 @@ const TeamSelection = ({ players }: any) => {
               </Flex>
             </Box>
           ))}
-        </Box>
+        </Box> */}
         <Button
           style={{ width: '50%', margin: '0 auto', cursor: 'pointer' }} 
           variant="soft" 

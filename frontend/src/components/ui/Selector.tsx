@@ -3,6 +3,7 @@ import { Box, Flex, Checkbox, Text, ScrollArea, Button } from '@radix-ui/themes'
 import { Formik, Form } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import playerData from '../../../players.json';
+import Header from './Header';
 
 const Selector = ({ setPlayers }: { setPlayers: any }) => {
   const navigate = useNavigate();
@@ -25,13 +26,7 @@ const Selector = ({ setPlayers }: { setPlayers: any }) => {
         style={{ background: '#010e38', borderRadius: '10px', border: '1px solid white', display: 'flex', flexDirection: 'column', gap: '30px' }} 
         p="20px"
       >
-        <Box style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-          <img src="/assets/cl.png" height="90px" />
-          <Flex direction="column" align="center" gap="2">
-            <Text size="6" weight="bold">EV CHAMPIONS LEAGUE</Text>
-            <Text size="3" weight="bold">TEAM SELECTOR</Text>
-          </Flex>
-        </Box>
+        <Header subMessage="TEAM SELECTION" />
         <Box>
           <Text weight="bold">SELECT PLAYERS</Text>
           <Formik
