@@ -3,7 +3,7 @@
     {
       "name": "Joel",
       "position": "Defender",
-      "rating": 7
+      "rating": 8
     },
     {
       "name": "Tom O",
@@ -33,7 +33,7 @@
     {
       "name": "Isaac",
       "position": "Defender",
-      "rating": 7
+      "rating": 8
     },
     {
       "name": "Stephen",
@@ -46,12 +46,12 @@
       "rating": 6
     },
     {
-      "name": "David (Metcalf)",
+      "name": "Big Dave",
       "position": "Defender",
       "rating": 6
     },
     {
-      "name": "David (Macdonald)",
+      "name": "DMac",
       "position": "Midfielder",
       "rating": 10
     },
