@@ -20,26 +20,28 @@ const TeamSelection = ({ players }: any) => {
 
   const handleDraw = () => {
     if (teamOneSelected) {
-      const findPlayer = teamOne.find((player: any) => player.isAnon);
-      console.log({ findPlayer });
-      setTeamOne((prev: any[]) =>
-        prev.map((player) =>
-          player.anonName === findPlayer.anonName
-            ? { ...player, isAnon: false }
-            : player
-        )
-      );
+      const findPlayer = teamOne.find((player: any) => player.isAnon) || null;
+      if (findPlayer) {
+        setTeamOne((prev: any[]) =>
+          prev.map((player) =>
+            player.anonName === findPlayer.anonName
+              ? { ...player, isAnon: false }
+              : player
+          )
+        );
+      }
       setTeamOneSelected(false);
     } else {
       const findPlayer = teamTwo.find((player: any) => player.isAnon);
-      console.log({ findPlayer });
-      setTeamTwo((prev: any[]) =>
-        prev.map((player) =>
-          player.anonName === findPlayer.anonName
-            ? { ...player, isAnon: false }
-            : player
-        )
-      );
+      if (findPlayer) { 
+        setTeamTwo((prev: any[]) =>
+          prev.map((player) =>
+            player.anonName === findPlayer.anonName
+              ? { ...player, isAnon: false }
+              : player
+          )
+        );
+      }
       setTeamOneSelected(true);
     }
   }
@@ -79,7 +81,7 @@ const TeamSelection = ({ players }: any) => {
               variant="soft" 
               color="sky"
               onClick={handleDraw}
-              disabled={teamOne.every((player: any) => !player.isAnon) && teamTwo.every((player: any) => !player.isAnon)}
+              // disabled={teamOne.every((player: any) => !player.isAnon) && teamTwo.every((player: any) => !player.isAnon)}
             >
               Draw
             </Button>
