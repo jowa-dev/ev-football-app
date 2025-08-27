@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react'
 import { Box, Flex, Checkbox, Text, ScrollArea, Button } from '@radix-ui/themes';
 import { Formik, Form } from 'formik';
@@ -39,7 +40,7 @@ const Selector = ({ setPlayers }: { setPlayers: any }) => {
                   {values.players.map((player, idx) => (
                     <Box style={{ background: '#06174d', borderRadius: '5px', padding: '7px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
                       <Flex direction="column" gap="1">
-                        <Text size="3" weight="bold">{player.name}</Text>
+                        <Text size="3" weight="bold">{player.name} - {player.rating}</Text>
                         <Text size="2" weight="medium">{player.position}</Text>
                       </Flex>
                       <Checkbox
