@@ -56,7 +56,7 @@
       "rating": 10
     },
     {
-      "name": "Paul",
+      "name": "Paul O",
       "position": "Defender",
       "rating": 4
     },
@@ -82,6 +82,16 @@
     },
     {
       "name": "Patryk",
+      "position": "Midfielder",
+      "rating": 6
+    },
+    {
+      "name": "Paul Q",
+      "position": "Midfielder",
+      "rating": 6
+    },
+    {
+      "name": "Clive",
       "position": "Midfielder",
       "rating": 6
     }
